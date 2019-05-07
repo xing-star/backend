@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "2b96d7f0-369f-4fdc-b517-2183c7ed9b5a",
+		"name": "质检Postman测试API接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户登录",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"account\": \"hello\",\n\t\"password\": \"hello\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户信息删除",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzNzYzNDE2OCwiZXhwIjoxNTM3NjU1NzY4fQ.eyJpZCI6ImNlN2ZmY2I0LWJkNDYtMTFlOC1iM2U3LTc4NGY0MzcxNDhhMiJ9.TyuKT255TGVBo8Z9s4UtS4z9gdphTn-m3RlJ0BDygUA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"account\": \"user\",\n\t\"password\": \"hh\",\n\t\"email\": \"\",\n\t\"name\": \"你好\",\n\t\"role_tag\": \"0\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/users/delete?id=2589526e-bc7f-11e8-bccf-f0761c13f143",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2589526e-bc7f-11e8-bccf-f0761c13f143"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户信息修改",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzNzYzMzA3MywiZXhwIjoxNTM3NjU0NjczfQ.eyJpZCI6ImU5ZjA4ZmM2LWJjYWItMTFlOC04NjJhLWYwNzYxYzEzZjE0MyJ9.mQLxUAWzP0ImUYo2_GEZJVmuOIDL-JHP-XGTu59414U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"account\": \"hh\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/users/update",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户信息创建",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzNzYzNDE2OCwiZXhwIjoxNTM3NjU1NzY4fQ.eyJpZCI6ImNlN2ZmY2I0LWJkNDYtMTFlOC1iM2U3LTc4NGY0MzcxNDhhMiJ9.TyuKT255TGVBo8Z9s4UtS4z9gdphTn-m3RlJ0BDygUA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"account\": \"user\",\n\t\"password\": \"hh\",\n\t\"email\": \"\",\n\t\"name\": \"你好\",\n\t\"role_tag\": \"0\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/users/create",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查看所有用户信息",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzNzYzNDE2OCwiZXhwIjoxNTM3NjU1NzY4fQ.eyJpZCI6ImNlN2ZmY2I0LWJkNDYtMTFlOC1iM2U3LTc4NGY0MzcxNDhhMiJ9.TyuKT255TGVBo8Z9s4UtS4z9gdphTn-m3RlJ0BDygUA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"account\": \"user\",\n\t\"password\": \"hh\",\n\t\"email\": \"\",\n\t\"name\": \"你好\",\n\t\"role_tag\": \"0\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/users/view",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"view"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查看单个用户信息",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzNzYzNDE2OCwiZXhwIjoxNTM3NjU1NzY4fQ.eyJpZCI6ImNlN2ZmY2I0LWJkNDYtMTFlOC1iM2U3LTc4NGY0MzcxNDhhMiJ9.TyuKT255TGVBo8Z9s4UtS4z9gdphTn-m3RlJ0BDygUA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"account\": \"user\",\n\t\"password\": \"hh\",\n\t\"email\": \"\",\n\t\"name\": \"你好\",\n\t\"role_tag\": \"0\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/users/one?id=ce7ffcb4-bd46-11e8-b3e7-784f437148a2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"one"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "ce7ffcb4-bd46-11e8-b3e7-784f437148a2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
